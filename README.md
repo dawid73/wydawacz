@@ -1,4 +1,4 @@
-
+<p align="center"><img src="https://raw.githubusercontent.com/dawid73/wydawacz/master/public/img/logo.png" ></p>
 
 
 ## About aplication
