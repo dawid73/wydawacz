@@ -48,6 +48,7 @@
                             @else
                                 <a class="btn btn-outline-warning btn-sm" href="{{ route('deals.edit', ['id' => $deal->id]) }}" role="button">Edytuj</a>
                                 <form method="post" action="{{ route('deals.delete', ['id' => $deal->id]) }}">
+                                    {{ csrf_field() }}
                                     @method('PUT')
                                     <button type="submit" class="btn btn-outline-danger btn-sm delete">Usuń</button>
                                 </form>

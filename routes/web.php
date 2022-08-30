@@ -39,7 +39,7 @@ Route::put('/wydania/delete/{id}', [DealController::class, 'delete'])->name('dea
 Route::put('/wydania/zmien/{id}', [DealController::class, 'update'])->name('deals.update')->middleware('auth');
 
 // Nie usuwamy, tylko ustawiamy wartość delete na true
-// Route::delete('/wydania/{id}', [DealController::class, 'destroy'])->name('deals.delete')->middleware('auth');
+//Route::delete('/wydania/{id}', [DealController::class, 'destroy'])->name('deals.delete')->middleware('auth');
 
 Route::resource('employee', EmployeeController::class, [
         'except' =>[
