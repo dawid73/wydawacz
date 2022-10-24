@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BarcodeController;
 use App\Http\Controllers\DealController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HelperController;
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return redirect(route('deals.index'));
+    return redirect(route('barcode.form'));
 });
 
 Auth::routes();
@@ -68,3 +69,9 @@ Route::put('product/{id}/disable', [ProductController::class, 'disable']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/about', [HelperController::class, 'about'])->name('about');
+
+Route::get('/kod/generuj', [BarcodeController::class, 'generateAndDownload'])->name('barcode.generate');
+
+Route::post('/kod/klonuj', [BarcodeController::class, 'cloneAndDownload'])->name('barcode.clone');
+
+Route::get('/kod', [BarcodeController::class, 'createForm'])->name('barcode.form');
