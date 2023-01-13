@@ -33,7 +33,7 @@
                             <a class="btn btn-outline-warning" href="{{ route('barcode.form') }}">Kody kreskowe</a>
                             <a class="btn btn-outline-success" href="{{ route('deals.add') }}">Wydaj</a>
                             <a class="btn btn-outline-success" href="{{ route('deals.index') }}">Lista wydań</a>
-                            <a class="btn btn-outline-warning" href="{{ route('product.index') }}">Produkty</a>
+                            {{-- <a class="btn btn-outline-warning" href="{{ route('product.index') }}">Produkty</a> --}}
                             <a class="btn btn-outline-warning" href="{{ route('employee.index') }}">Pracownicy</a>
                         </form>
                     </ul>
@@ -81,7 +81,7 @@
         </main>
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <p class="col-md-4 mb-0 text-muted">&copy; {{ config('app.name', 'Laravel') }} | Wersja: 1.02 </p>
+              <p class="col-md-4 mb-0 text-muted">&copy; {{ config('app.name', 'Laravel') }} | Wersja: 1.1.0 </p>
 
               <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>

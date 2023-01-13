@@ -24,11 +24,11 @@
                         @else
                             <div class="mb-3">
                                 <label for="code">Kod</label>
-                                <input type="text" class="form-control" id="code" name="code" value="{{ $product->code }}" required readonly>
+                                <input type="text" class="form-control" id="code" name="code" value="{{ $product->kodykreskowe }}" required readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="name">Nazwa produktu</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $product->name }}" required readonly>
+                                <input type="text" class="form-control" id="name" name="name" value="{{ $product->nazwa }}" required readonly>
                             </div>
                         @endif
                             <div class="mb-3">
