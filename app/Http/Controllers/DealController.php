@@ -76,10 +76,10 @@ class DealController extends Controller
         $code = $request->codeorname;
 
         // $product = DB::table('products')->where('code', $request->codeorname)->first();
-        $product = DB::connection('asystent')->table('dk_dokumenty')->where('kodykreskowe', 'like', '%'.$request->codeorname.'%')->first();
+        $product = DB::connection('asystent')->table('dk_magazyn')->where('kodykreskowe', 'like', '%'.$request->codeorname.'%')->first();
 
         if($product == null){
-            $product = DB::connection('asystent')->table('dk_dokumenty')->where('nazwa', 'like', '%'.$request->codeorname.'%')->first();
+            $product = DB::connection('asystent')->table('dk_magazyn')->where('nazwa', 'like', '%'.$request->codeorname.'%')->first();
         }
 
         return view('deals.create2', compact('product', 'code'));
