@@ -31,6 +31,7 @@
                             <th scope="col">Data / czas</th>
                             <th scope="col">Nazwa produktu</th>
                             <th scope="col">Sztuk</th>
+                            <th scope="col">Przeznaczenie</th>
                             <th scope="col">Osoba</th>
                             <th scope="col">Akcje</th>
                           </tr>
@@ -41,6 +42,7 @@
                             <td>{{ $deal->created_at }}</td>
                             <td>{{ $deal->product_name }}</td>
                             <td>{{ $deal->pcs }}</td>
+                            <td>{{ $deal->destiny }}</td>
                             <td>{{ $deal->employee }}</td>
                             <td>
                             @guest

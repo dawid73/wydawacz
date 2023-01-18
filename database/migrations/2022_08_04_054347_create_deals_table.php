@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('product_name');
             $table->integer('pcs');
             $table->string('employee');
-            $table->string('description')->nullable();;
+            $table->string('destiny')->nullable();
+            $table->string('description')->nullable();
             $table->boolean('delete')->default(false);
             $table->timestamps();
         });

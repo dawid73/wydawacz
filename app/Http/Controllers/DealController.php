@@ -37,6 +37,7 @@ class DealController extends Controller
         $deal->product_name = $request->name;
         $deal->employee = $request->employee;
         $deal->pcs = $request->pcs;
+        $deal->destiny = $request->destiny;
         $deal->description = $request->description;
 
         $deal->save();
@@ -59,6 +60,7 @@ class DealController extends Controller
         $deal->product_name = $request->name;
         $deal->employee = $request->employee;
         $deal->pcs = $request->pcs;
+        $deal->destiny = $request->destiny;
         $deal->description = $request->description;
 
         $deal->save();
@@ -78,9 +80,10 @@ class DealController extends Controller
         // $product = DB::table('products')->where('code', $request->codeorname)->first();
         $product = DB::connection('asystent')->table('dk_magazyn')->where('kodykreskowe', 'like', '%'.$request->codeorname.'%')->first();
 
-        if($product == null){
-            $product = DB::connection('asystent')->table('dk_magazyn')->where('nazwa', 'like', '%'.$request->codeorname.'%')->first();
-        }
+        // szukanie po nazwie - narazie wylaczone
+        // if($product == null){
+        //     $product = DB::connection('asystent')->table('dk_magazyn')->where('nazwa', 'like', '%'.$request->codeorname.'%')->first();
+        // }
 
         return view('deals.create2', compact('product', 'code'));
     }
@@ -91,6 +94,7 @@ class DealController extends Controller
         $productcode = $request->code;
 
         $searchname = $request->searchname;
+        $destiny = $request->destiny;
 
         $employee = DB::table('employees')->where('code', $searchname)->first();
 
@@ -100,7 +104,7 @@ class DealController extends Controller
             $employee = $employee->name;
         }
 
-        return view('deals.create3', compact('employee', 'productname', 'productcode'));
+        return view('deals.create3', compact('employee', 'productname', 'productcode', 'destiny'));
     }
 
     public function delete($id){

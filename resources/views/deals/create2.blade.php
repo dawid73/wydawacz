@@ -32,11 +32,13 @@
                             </div>
                         @endif
                             <div class="mb-3">
+                                <label for="destiny">Przeznaczenie</label>
+                                <input type="text" class="form-control" id="destiny" name="destiny" required autofocus>
+                            </div>
+                            <div class="mb-3">
                                 <label for="searchname">Pracownik (Zeskanuj kartę lub wpisz część nazwiska)</label>
                                 <input type="text" class="form-control" id="searchname" name="searchname" required autofocus>
                             </div>
-
-
                         <br/>
                         <button type="submit" class="btn btn-primary">Następny krok</button>
                     </form>

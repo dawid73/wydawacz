@@ -18,6 +18,10 @@
                             <input type="text" class="form-control" id="name" name="name" value="{{ $productname }}" required readonly>
                         </div>
                         <div class="mb-3">
+                            <label for="destiny">Przeznaczenie</label>
+                            <input type="text" class="form-control" id="destiny" name="destiny" value='{{ $destiny }}' required readonly>
+                        </div>
+                        <div class="mb-3">
                             <label for="employee">Pracownik</label>
                             <input type="text" class="form-control" id="employee" name="employee" value='{{ $employee }}' required readonly>
                         </div>
